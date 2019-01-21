@@ -94,3 +94,5 @@ arba įdiegus įskiepį, kuris atliekant veiksmus pele, trumpai ekrane parodys k
     ```
     0 1 1 2 3 5 
     ```
+
+- [Namų darbai](uzduotys/nd1.pdf)
