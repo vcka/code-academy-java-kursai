@@ -78,3 +78,5 @@ arba įdiegus įskiepį, kuris atliekant veiksmus pele, trumpai ekrane parodys k
     ```
     Paieškos laukelio pagalba surasti įskiepį `Key Promoter X` ir įdiegti spaudžiant `Install`. Spausti `Restart Intellij IDEA` norint įgalintį įdiegtą įskiepį.
 
+## Užduotys
+[Užduotys](uzduotys/uzduotys1.pdf)
