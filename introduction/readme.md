@@ -82,3 +82,15 @@ arba įdiegus įskiepį, kuris atliekant veiksmus pele, trumpai ekrane parodys k
 - [Užduotys](uzduotys/uzduotys1.pdf)
 - [Užduotys2](uzduotys/uzduotys2.pdf)
 - [Užduotys3](uzduotys/uzduotys3.pdf)
+- Užduotis 4 (fibonacci seka):
+
+    Įveskite skaičių. 
+    Išspausdinkite [fibonacci skaičių seką](https://en.wikipedia.org/wiki/Fibonacci_number) iki įvesto skaičiaus. 
+    Padarykite tai naudodami ciklą ir naudodami [rekursiją](https://en.wikipedia.org/wiki/Recursion_(computer_science))
+    Pvz.: 
+    ```java
+    skaicius = 6
+    ```
+    ```
+    0 1 1 2 3 5 
+    ```
