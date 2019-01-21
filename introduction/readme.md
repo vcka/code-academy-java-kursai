@@ -81,3 +81,4 @@ arba įdiegus įskiepį, kuris atliekant veiksmus pele, trumpai ekrane parodys k
 ## Užduotys
 - [Užduotys](uzduotys/uzduotys1.pdf)
 - [Užduotys2](uzduotys/uzduotys2.pdf)
+- [Užduotys3](uzduotys/uzduotys3.pdf)
