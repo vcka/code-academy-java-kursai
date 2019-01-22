@@ -8,3 +8,4 @@
 
 ### Naudingos nuorodos
 - https://www.w3schools.com/java/
+- [Java code convention](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)
