@@ -3,6 +3,7 @@
 ### Teorija
 - [Java OOP teorija 1](JavaBasics.pdf)
 - [Java OOP teorija 2](JavaBasics2.pdf)
+- [Java OOP teorija 3](JavaBasics3.pdf)
 
 ### Užduotys
 - [Užduotys](exercises/readme.md)
