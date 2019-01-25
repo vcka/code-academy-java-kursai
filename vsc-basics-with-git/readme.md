@@ -22,7 +22,7 @@ Git projekto struktūra sudaro 3 sritys - „medžiai“:
 Git repozitorijoje esantys failai gali būti vienos iš šių būsenų:
 - **Commited** - reiškia, kad failo pakeitimas yra išsaugotas Git srityje
 - **Modified** - reiškia, jog failo turinys yra pakeistas, bet pakeitimas dar nėra išsaugotas Git srityje
-- **Staged** - reiškia, jog failas yra pažymėtas ir jo pakeitimai bus išsaugoti sakančio *commito* metu 
+- **Staged** - reiškia, jog failas yra pažymėtas ir jo pakeitimai bus išsaugoti kito *commito* metu 
 
 Standartinė darbo Git eiga atrodo taip:
 - Darbinėje srityje esantys failai yra modifikuojami
