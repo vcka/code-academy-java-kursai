@@ -1,7 +1,7 @@
 # Polimorfizmo užduotys
 1.	Sukurkite abstrakčią klasę `Person` su laukais `personalID`, `name`, `gender`
 2.	Sukurkite abstrakčią klasę `PrivatePerson` kurį paveldėtų klasę `Person`, ir turėtų abstrakčius metodus, `getEmploymentStatus();`
-3.	Sukurkite klases `EmployedPerson` ir `UnemployedPerson` kurios pavaldėtų `Employee` klasę ir įgyvendintų abstrakčius metodus
+3.	Sukurkite klases `EmployedPerson` ir `UnemployedPerson` kurios pavaldėtų `PrivatePerson` klasę ir įgyvendintų abstrakčius metodus
 4.	Pridėkite `PrivatePerson` statinį metodą, kuris pagal nurodytus parametrus sukurtų `EmployedPerson` arba `UnemployedPerson`
 5.	Sukurkite klasę `LegalPerson ` kuri paveldėtų  `Person` klasę. Kviečiant metodą `getGender()` turėtų būti metama `UnsupportedOperationException`, kadangi juridiniai asmenys neturi lyties.
 6.	Sukurkite klasę `PersonRepository`, kuri turėtų šį statinį metodą:  `List<Person> getPersons()`. Šis metodas turėtų grąžinti visų potipių `Person` objektų pavyzdžius.
