@@ -8,3 +8,5 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 ### Paskaitų temos:
 - [Įvadas](/introduction)
 - [Java programavimo pagrindai](/java-basics)
+- [Versijų valdymas įrankiu Git](/vsc-basics-with-git)
+
