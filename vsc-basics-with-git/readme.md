@@ -6,7 +6,7 @@ Versijų valdymo sistema saugo visų projekto pakeitimų istoriją. Tokią infor
 ### Paskirstytos versijų valdymo sistemos
 Paskirstytą versijos valdymo sistemą (Distributed version control system arba DVCS) sudaro nuotolinis serveris, identifikuojamo kaip centrinė saugykla (central repository) bei lokalios klientų saugyklos. Nuotolinis serveris klientams teikia visą saugyklos turinį, su prieiga prie kiekvieno projekto failo, atšakos ir visų pakeitimų istorijos. Centrinėje saugykloje yra pagrindinė projekto versija, kiekvienas vartotojas įvykdytus pakeitimus sinchronizuoja būtent su ja. DVCS nereikalauja nuolatinio ryšio su centrine saugykla - skirtingų klientų padaryti pakeitimai sinchronizuojami esant poreikiui. Jei nuotolinis serveris miršta, centrinė saugykla gali būti atkurta iš bet kurio kliento saugyklos, nes klientams pateikiamas visas  centrinės saugyklos turinys.
 ### Git
-Git yra viena iš paskirstytų versijų valdymo sistemų, sukurta 2005 metais Linus Torvalds siekiant palengvinti „Linux“ branduolio kūrimą. Tai populiariausia versijų valdymo sistema ir pagal *Stack Overflow Developers* [apklausą] (https://insights.stackoverflow.com/survey/2018#work-version-control) 2018 m. ją naudojo 88 proc. programuotojų.
+Git yra viena iš paskirstytų versijų valdymo sistemų, sukurta 2005 metais Linus Torvalds siekiant palengvinti „Linux“ branduolio kūrimą. Tai populiariausia versijų valdymo sistema ir pagal *Stack Overflow Developers* [apklausą](https://insights.stackoverflow.com/survey/2018#work-version-control) 2018 m. ją naudojo 88 proc. programuotojų.
 
 #### Git duomenų saugojimas
 
