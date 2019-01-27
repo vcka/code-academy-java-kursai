@@ -239,5 +239,9 @@ Tvarkingą kodą užtikriną abstrakcijos, nepriklausomi, vienas nuo kito atskir
 
 Taip pat, sąsajas reikėtų naudoti tipams nurodyti, o jų įgyvendinimas turėtų būti kiek galima paslėptas. Tvarkingi metodai grąžina sąsajas. Klientui nereikia žinoti, ar jis gauna `ArrayList` ar `LinkedList` įgyvendinimą, jam svarbu kad gautas objektas tenkintų `List` sąsajos kontraktą. Besilaikant tokių praktikų, lengviau išlaikyti tvarkingą ir nuo skirtingų komponentų nepriklausomą kodą.
 
+### Užduotys
+- [Polimorfizmo uzduotis](exercises/polymorhism-exercise.md)
+
+
 ### Šaltiniai:
 -	https://docs.oracle.com/javase/tutorial/java/IandI/index.html
