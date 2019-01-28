@@ -9,7 +9,7 @@
 8.	Sukurkite sąsają `Employee`, kuri turėtų metodus `int getSalary()` ir `String getEmployerName()`
 9.	`EmployedPerson` turėtų įgyvendinti `Employee` sąsają
 10.	Sukurkite sąsają `Employer`, kuri turėtų metodus `int getRevenue()` ir `List<Employee` getEmployees()` 
-11.	`PrivatPerson` klasė turėtų įgyvendinti sąsają `Employer`
+11.	`LegalPerson` klasė turėtų įgyvendinti sąsają `Employer`
 12.	Sukurkite sąsają `WorkplaceService` su šiais metodais: `List<Employers> getEmployers()`, `List<Employees> getEmployees()`
 13.	Tegul `PersonFacade` įgyvendina `WorkplaceService` sąsają. Įgyvendinimui panaudokite jau esamus `PersonFacade` metodus.
 14.	Sukurkite klasę ` EmployersStatisticsService `, kurios konstruktorius priimtų parametrą `WorkplaceService`
@@ -19,4 +19,4 @@
 18.	Sukurkite klasę `UnemploymentStatisticsService` kuri priimtų kaip parametrą  ` PersonEmploymentService` klasę ir turėtų šiuos metodus: `int employedPersons()`. `int unEmployedPersons()`
 19.	`PersonFacade` klasė tapo atsakinga už labai daug funkcijų. Pabandykite pagal biznio logiką išskaidyti `PersonFacade` funkcijas į skirtingas klases, kurios įgyvendintų reikalingas sąsajas ir naudotų `PersonFacade` reikalingiems dėmenims gauti.
 20.	Sukurkite statinį metodą `printPerson`, kuriam paduodamas `Person` objektas ir jo reikšmės yra išspausdinamos konsolėje. Metodas turėtų dinamiškai prisitaikyti prie objekto potipių ir atitinkamai spausdinti potipiui būdingus laukus. Naudokite šį metodą rezultatams išvesti.
-21.	Padarykite programą efektyvesnę, įgyvendindami talpyklą (cache) `PersonFacade` klasėje.  Talpykla veiktų taip, kad ` PersonFacade ` metodų rezultatai kurį laiką būtų saugomi ` PersonFacade` klasėje ir skaičiavimai vyktų tik praėjus tam tikram laiko tarpui, kai saugomi įrašai tampa nebeaktualūs.	
+21.	Padarykite programą efektyvesnę, įgyvendindami talpyklą (cache) `PersonFacade` klasėje.  Talpykla veiktų taip, kad ` PersonFacade ` metodų rezultatai kurį laiką būtų saugomi `PersonFacade` klasėje ir skaičiavimai vyktų tik praėjus tam tikram laiko tarpui, kai saugomi įrašai tampa nebeaktualūs.	
