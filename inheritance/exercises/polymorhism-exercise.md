@@ -10,7 +10,7 @@
 9.	`EmployedPerson` turėtų įgyvendinti `Employee` sąsają
 10.	Sukurkite sąsają `Employer`, kuri turėtų metodus `int getRevenue()` ir `List<Employee` getEmployees()` 
 11.	`LegalPerson` klasė turėtų įgyvendinti sąsają `Employer`
-12.	Sukurkite sąsają `WorkplaceService` su šiais metodais: `List<Employers> getEmployers()`, `List<Employees> getEmployees()`
+12.	Sukurkite sąsają `WorkplaceService` su šiais metodais: `List<Employer> getEmployers()`, `List<Employee> getEmployees()`
 13.	Tegul `PersonFacade` įgyvendina `WorkplaceService` sąsają. Įgyvendinimui panaudokite jau esamus `PersonFacade` metodus.
 14.	Sukurkite klasę ` EmployersStatisticsService `, kurios konstruktorius priimtų parametrą `WorkplaceService`
 15.	`EmployersStatisticsService` klasė turėtų pateikti šiuos metodus: `List<Employee> getProfitableOrganizations()` ir `List<Employee> getUnprofitableOrganizations()`
