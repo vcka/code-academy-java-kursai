@@ -13,7 +13,7 @@
 12.	Sukurkite sąsają `WorkplaceService` su šiais metodais: `List<Employer> getEmployers()`, `List<Employee> getEmployees()`
 13.	Tegul `PersonFacade` įgyvendina `WorkplaceService` sąsają. Įgyvendinimui panaudokite jau esamus `PersonFacade` metodus.
 14.	Sukurkite klasę ` EmployersStatisticsService `, kurios konstruktorius priimtų parametrą `WorkplaceService`
-15.	`EmployersStatisticsService` klasė turėtų pateikti šiuos metodus: `List<Employee> getProfitableOrganizations()` ir `List<Employee> getUnprofitableOrganizations()`
+15.	`EmployersStatisticsService` klasė turėtų pateikti šiuos metodus: `List<Employer> getProfitableOrganizations()` ir `List<Employer> getUnprofitableOrganizations()`
 16.	Sukurkite sąsają `PersonEmploymentService` kuri turėtų metodus `List<UnemployedPerson> unemployedPersons()` ir `List<EmployedPerson> employedPersons()`
 17.	`PersonFacade` turėtų įgyvendinti `PersonEmploymentService`
 18.	Sukurkite klasę `UnemploymentStatisticsService` kuri priimtų kaip parametrą  ` PersonEmploymentService` klasę ir turėtų šiuos metodus: `int employedPersons()`. `int unEmployedPersons()`
