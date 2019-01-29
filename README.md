@@ -10,4 +10,4 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Java programavimo pagrindai](/java-basics)
 - [Versijų valdymas įrankiu Git](/vsc-basics-with-git)
 - [Sąsajos ir paveldėjimas](/inheritance)
-
+- [Exceptions](/exceptions)
