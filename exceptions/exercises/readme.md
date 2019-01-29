@@ -69,3 +69,64 @@ Device Display with id 4 is ON
 Device Keyboard with id 5 is ON
 -----Pinging finished----
 ```
+
+## Nr. 4
+
+### Užduotis
+
+1. Sukurkite klasę `Email`, kuri turi laisko turinį, temą, informaciją kam siunciama ir būseną (naujas, issiustas, kartojamas siuntimas).
+2. Sukurkite klasę `EmailSender`, kuri turi metodą `sendEmail` priimantį sąrašą laiškų. Metodas iteruoja laiškus ir po vieną siunčia. Siuntimui kviečia klasės `NetworkConnector` metodą `send`. Jei laiško išsiuntimas yra nesėkmingas (klaida `NoNetworkException`, kurios klasę taip pat reikia sukurti), tai reikia pakeisti laiško būseną į "kartojamas siuntimas". Tokius laišku reikia pakartoti po 3 sekundžių. `Thread.sleep(3000);` - Java programa laukia 3 sekundes.
+3. Klasės `NetworkConnector` metodas `send` turi veikti ne visada sėkmingai:
+
+```java
+class NetworkConnector {
+
+    public void send(Object o) throws NoNetworkException {
+        Random rand = new Random();
+        int n = rand.nextInt(10);
+        try {
+            int i = 1 / n;
+        } catch (ArithmeticException e) {
+            throw new NoNetworkException();
+        }
+    }
+}
+```
+
+Tokios veiksmų sekos
+```java
+public static void main(String[] args) {
+
+    EmailSender emailSender = new EmailSender();
+
+    List<Email> emails = new ArrayList<>();
+    emails.add(new Email("aaa@aaa.lt", "subject1", "body1"));
+    emails.add(new Email("bbb@bbb.lt", "subject2", "body2"));
+    emails.add(new Email("ccc@ccc.lt", "subject3", "body3"));
+    emails.add(new Email("ddd@ddd.lt", "subject4", "body4"));
+    emails.add(new Email("eee@eee.lt", "subject5", "body5"));
+
+    emailSender.sendEmail(emails);
+
+}
+```
+rezultatas galėtų būti toks:
+```
+Sending email to aaa@aaa.lt
+Email to aaa@aaa.lt delivered
+
+Sending email to bbb@bbb.lt
+Email to bbb@bbb.lt delivered
+
+Sending email to ccc@ccc.lt
+Email to ccc@ccc.lt delivered
+
+Sending email to ddd@ddd.lt
+Email to ddd@ddd.lt delivered
+
+Sending email to eee@eee.lt
+Failed to send an email to eee@eee.lt
+
+Redelivering email to eee@eee.lt
+Email to eee@eee.lt delivered
+```
