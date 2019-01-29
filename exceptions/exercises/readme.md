@@ -70,6 +70,109 @@ Device Keyboard with id 5 is ON
 -----Pinging finished----
 ```
 
+### Sprendimas
+
+<details><summary>Išskleisti</summary>
+<p>
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Monitoring monitoring = new Monitoring();
+
+        List<Device> devices = new ArrayList<>();
+        devices.add(new Mouse(true));
+        devices.add(new Display(true));
+        devices.add(new Keyboard(true));
+        devices.add(new Mouse(true));
+        devices.add(new Display(true));
+        devices.add(new Keyboard(true));
+
+        monitoring.pingAllDevices(devices);
+        devices.get(3).setOn(false);
+        monitoring.pingAllDevices(devices);
+    }
+
+}
+
+class Monitoring {
+    public void pingAllDevices(List<Device> devices) {
+        System.out.println("\n-----Pinging started-----");
+        for (Device d : devices) {
+            try {
+                d.ping();
+                System.out.println(String.format("Device %s with id %d is ON", d.getClass().getSimpleName(), d.getId()));
+            } catch (DeviceIsOffException e) {
+                System.out.println(String.format("Device %s with id %d is OFF.", d.getClass().getSimpleName(), d.getId()));
+            }
+        }
+        System.out.println("-----Pinging finished----");
+    }
+}
+
+class Device {
+    public static int idCounter;
+    private boolean isOn;
+    private int id;
+
+    public Device(boolean isOn) {
+        this.isOn = isOn;
+        id = idCounter++;
+    }
+
+    public boolean isOn() {
+        return isOn;
+    }
+
+    public void setOn(boolean on) {
+        isOn = on;
+    }
+
+    public void ping() throws DeviceIsOffException {
+        if (!isOn) {
+            throw new DeviceIsOffException();
+        }
+    }
+
+    public int getId() {
+        return id;
+    }
+}
+
+class Mouse extends Device {
+
+    public Mouse(boolean isOn) {
+        super(isOn);
+    }
+}
+
+class Display extends Device {
+
+    public Display(boolean isOn) {
+        super(isOn);
+    }
+}
+
+class Keyboard extends Device {
+
+    public Keyboard(boolean isOn) {
+        super(isOn);
+    }
+}
+
+class DeviceIsOffException extends Exception {
+
+}
+```
+
+</p>
+</details>
+
 ## Nr. 4
 
 ### Užduotis
