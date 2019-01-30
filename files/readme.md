@@ -134,7 +134,7 @@ try (BufferedWriter bufferedWriter = Files.newBufferedWriter(file)) {
 Darbo su failais programėles pavyzdį galite pamatyti [čia](examples/files-example/src)
 
 ### Užduotys
- - [Užduotis darbui su failais](exercises/file-exercise.md)
+ - [Užduotis darbui su failais](exercises/files-exercise.md)
 
 ### Nuorodos 
 -	https://docs.oracle.com/javase/tutorial/essential/io/path.html
