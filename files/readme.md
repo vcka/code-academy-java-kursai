@@ -92,7 +92,7 @@ Grąžina sąrašą su failų eilutėmis
 ### Įvesties/Išvesties srautai
 Java srautas - duomenų (baitų, simbolių) seka. Srauto klasės leidžia operuoti skaitymo / rašymo operacijomis. 
 
-![Streams](stream.PNG)
+![Streams](stream.png)
 
 Java kalboje srautą pavaizduoja `InputStream`, `OutputStream` sąsajos. Srauto sąsajos turi daug skirtingų įgyvendinimų skirtingiems srautų tipams. Pagrindinės srautų klasės yra `java.io` pakete.
 
