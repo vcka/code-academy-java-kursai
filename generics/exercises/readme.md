@@ -114,3 +114,36 @@ programa atspausdina:
 DnsServer{ip1='8.8.8.8', ip2='8.8.4.4'}
 Hello
 ```
+
+## Nr. 4
+
+### Užduotis
+Sukurkite klasę `ListOfNumbers` kuri saugo sąrašą `Double` tipo skaičių. Turi metodą `addNumber`, kuris perduotą skaičių įdeda į sąrašą ir `getAverage`, kuris grąžina sąrašo skaičių vidurkį.
+
+Kitoje klasėje sukurkite metodą `findWithMaxAverage`, kuris gali priimti iš anksto nežinomą skaičių `ListOfNumbers` tipo parametrų. Metodas turi surasti ir grąžinti objektą, kurio skaičių vidurkis yra didžiausias.
+
+Pavyzdys:
+```java
+ListOfNumbers listObject1 = new ListOfNumbers();
+listObject1.addNumber(1.5d);
+listObject1.addNumber(10d);
+listObject1.addNumber(2.5d);
+
+ListOfNumbers listObject2 = new ListOfNumbers();
+listObject2.addNumber(0d);
+listObject2.addNumber(1d);
+
+ListOfNumbers listObject3 = new ListOfNumbers();
+listObject3.addNumber(100d);
+
+ListOfNumbers result1 = findWithMaxAverage(listObject1, listObject2, listObject3);
+ListOfNumbers result2 = findWithMaxAverage(listObject1, listObject2);
+
+System.out.println(result1);
+System.out.println(result2);
+```
+atspausdina rezultatą
+```
+ListOfNumbers{numbers=[100.0]}
+ListOfNumbers{numbers=[1.5, 10.0, 2.5]}
+```
