@@ -17,4 +17,3 @@ Tikėtinas rezultatas:
 Hello
 World
 ```
-
