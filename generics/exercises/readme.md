@@ -76,3 +76,41 @@ Berzas turi lapus
 Berzas turi lapus
 Berzas turi lapus
 ```
+
+## Nr. 3
+
+### Užduotis
+Sukurkite klasę `Pora`, su klasės atributais `Raktas` ir `Reiksme`. Abu klasės atributai gali būti bet koks objektas.
+
+Sukurkite klasę `Mapas` su vienu klasės atributu `sarasasPoru`, kuris bus sarasas, skirtas saugoti klasės `Pora` objektams. Klasė `Mapas` turi turėti metodą `ideti`, kuriam per parametrus perdavus raktą ir reikšmę, iš jų sukonstruoja porą ir ją įdeda į map'ą. Taip pat reikalingas metodas `gauti`, kuriam per parametrą perdavus raktą, gausime reikšmę pagal tą raktą iš sąrašo.  
+
+Sukurkite klasę `DnsServer`, kuri turi atributus `ip1` ir `ip2`. 
+
+Sukurkite enum `DnsProvider`, kuris saugos keletą reikšmių, pvz. `GOOGLE`.
+
+Atskiroje klasėje `main` metode sukurti map'ą, kuris saugo `DnsProvider -> DnsServer` poras. Sukurti kitą map'ą, kuris saugo `String -> String` poras. Map'us užpildyti duomenimis ir pabandyti gauti reikšmes pagal raktus.
+
+Panaudojimo pavyzdys:
+```java
+Mapas<DnsProvider, DnsServer> dnsMapas = new Mapas<>();
+
+dnsMapas.ideti(GOOGLE, new DnsServer("8.8.8.8", "8.8.4.4"));
+dnsMapas.ideti(CLOUDFLARE, new DnsServer("1.1.1.1", "1.0.0.1"));
+// ...
+
+DnsServer googleDns = dnsMapas.gauti(GOOGLE);
+System.out.println(googleDns);
+
+Mapas<String, String> zodynoMapas = new Mapas<>();
+zodynoMapas.ideti("Labas", "Hello");
+zodynoMapas.ideti("Pasaulis", "World");
+// ...
+
+String labas = zodynoMapas.gauti("Labas");
+System.out.println(labas);
+```
+programa atspausdina:
+```
+DnsServer{ip1='8.8.8.8', ip2='8.8.4.4'}
+Hello
+```
