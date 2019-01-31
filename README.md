@@ -12,3 +12,4 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Sąsajos ir paveldėjimas](/inheritance)
 - [Išimtys](/exceptions)
 - [Darbas su failais](/files)
+- [Generics](/generics)
