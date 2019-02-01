@@ -147,3 +147,11 @@ atspausdina rezultatą
 ListOfNumbers{numbers=[100.0]}
 ListOfNumbers{numbers=[1.5, 10.0, 2.5]}
 ```
+
+## Nr. 5
+
+### Užduotis
+
+Sukurkite klasę `SuperPair` su trimis *generic* tipais taip, kad trečiasis tipas galėtų būti tik koks nors `Number` skaičius.
+Pirmieji du tipai gali būti bet kokie. Klasė `SuperPair` turi turėti kontruktorių su trimis parametrais.
+Sukurkite kelis tokių porų objektus. Pabandykite trečią parametrą paduoti ne skaičių.
