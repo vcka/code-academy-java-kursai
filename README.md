@@ -13,4 +13,5 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Išimtys](/exceptions)
 - [Darbas su failais](/files)
 - [Generics](/generics)
-- [Comparable](/comparable)
+- [Projektai](/projects)
+- [Comparator](/comparator)
