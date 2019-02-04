@@ -15,3 +15,4 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Generics](/generics)
 - [Projektai](/projects)
 - [Comparator](/comparator)
+- [Kolekcijų karkasas](/collections-framework)
