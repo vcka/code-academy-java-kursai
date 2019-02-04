@@ -3,7 +3,7 @@
 
  Kolekcijų karkasas susideda iš:
 - **Sąsajų (interfaces)** - abstrakčiųjų duomenų tipų, atspindinčių skirtingas kolekcijas ir pateikiančių vieningą metodų rinkinį, kuris leidžia manipuliuoti kolekcijose talpinamais objektais, nepriklausomai naudojamos kolekcijos tipo.
--	**Įgyvendinimų(Implementations)** - konkrečių abstrakčių kolekcijų sąsajų įgyvendinimų.
+-	**Įgyvendinimų (Implementations)** - konkrečių abstrakčių kolekcijų sąsajų įgyvendinimų.
 -	 **Pagalbinių funkcijų**  - statinių metodų, atliekančių naudingas funkcijas su kolekcijomis, pvz. kolekcijos objektų rūšiavimas.
 
 `java.util.Collection`yra viena pagrindinių kolekcijų sąsajų. Beveik visi kolekcijos objektai paveldi šią sąsają. Esminiai šios sąsajos palikuonys:
