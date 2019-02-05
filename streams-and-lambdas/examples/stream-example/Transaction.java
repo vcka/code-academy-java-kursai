@@ -1,6 +1,7 @@
 package transactionStreamExamples;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Transaction {
@@ -8,7 +9,6 @@ public class Transaction {
     private LocalDateTime dateTime;
     private int amount;
     private List<String> recipients;
-
 
     public Transaction(int id, LocalDateTime dateTime, int amount) {
         this.id = id;
@@ -35,7 +35,8 @@ public class Transaction {
     public void addRecipient(String recipient) {
         recipients.add(recipient);
     }
-    
+
+
     public static List<Transaction> transactions(int n) {
         List<Transaction> transactions = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -45,5 +46,15 @@ public class Transaction {
                             1000 + i * 2));
         }
         return transactions;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "id=" + id +
+                ", dateTime=" + dateTime +
+                ", amount=" + amount +
+                ", recipients=" + recipients +
+                '}';
     }
 }
