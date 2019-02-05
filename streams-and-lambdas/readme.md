@@ -71,7 +71,7 @@ Java teikia didelį standartinių funkcinių sąsajų rinkinį *java.util.functi
 Standartinės funkcinės sąsajos yra suskirstytos į 4 grupes:
 - *Consumers* - priima argumentą ir nieko negrąžina (*Consumer, BiConsumer, IntConsumer, ...*)
 - *Suppliers* - nepriima jokių argumentų, bet grąžina reikšmę (*Supplier, IntSupplier, ...*)
-- *Predicates* - priima argumentą ir grąžina *boolean* tipo reikšmę (*Predicate, BiPredicate, LongSupplier, ...)
+- *Predicates* - priima argumentą ir grąžina *boolean* tipo reikšmę (*Predicate, BiPredicate, ...*)
 - *Functions* - priima argumentą ir grąžina reikšmę (*Function, BiFunction, UnaryOperator*)
 
 #### Metodų nuorodos
