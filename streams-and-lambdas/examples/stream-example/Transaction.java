@@ -40,9 +40,9 @@ public class Transaction {
         List<Transaction> transactions = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             transactions
-                    .add(new Transaction(n,
-                            LocalDateTime.now().plusMinutes(n),
-                            1000 + n * 2));
+                    .add(new Transaction(i,
+                            LocalDateTime.now().plusMinutes(i),
+                            1000 + i * 2));
         }
         return transactions;
     }
