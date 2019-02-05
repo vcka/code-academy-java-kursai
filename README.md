@@ -16,3 +16,4 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Projektai](/projects)
 - [Comparator](/comparator)
 - [Kolekcijų karkasas](/collections-framework)
+- [*Lambda* išraiškos ir srautai](/streams-and-lambdas)
