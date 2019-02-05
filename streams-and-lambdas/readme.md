@@ -139,7 +139,7 @@ Srautai gali būti sukurti keliais būdais, pavyzdžiui:
 -	**Min** - grąžina mažiausią srauto elementą
 -	**Max** - grąžina didžiausią srauto elementą
 ### Užduotys
-- [Šaltinių užduotis](exercises/stream-exercise.md)
+- [Šrautų užduotis](exercises/stream-exercise.md)
 
 ### Šaltiniai
 -	Effective Java 3rd edition
