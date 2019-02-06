@@ -46,3 +46,12 @@ Vėliau apsaugoti `PvmValidatorius` klasės metodą `tikrintiPVMkoda`, kad jo ve
 
 [Šaltinis](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=14&ved=2ahUKEwixyoqIzdPfAhVCjSwKHYxdCPQQFjANegQIBBAC&url=http%3A%2F%2F85.81.229.78%2Fsystems%2FDKVIES%2F-%2520Arkiv%2FAlgoritme%25E6ndringer%2FVIES-VAT%2520Validation%2520Routines-v15.0.doc&usg=AOvVaw2mVLkFoVBQrUnVUfRafihp&fbclid=IwAR3k9SQy7HuSO_HSM9xfbqStjjfR90tbaDK-SRzr1PeTSUp9TfIKJcxpOxg)
 
+
+## Nr. 3
+
+### Užduotis
+
+Sukurti klasę `Skaitliukas`, kuri turi `String` tipo statinį kintamąjį `n` saugoti reikšmei, pvz. `"000"`. Taip pat turi metodą `didintiVienetu`, kuris tik padidina `n` reikšmę vienetu ir metodą `nustatytiNumatytajareiksme`, kuris atstato `n` reikšmę į pradinę (naudoti konstantas). Skaitliuko metodai ir klasės kinatamasis nėra `public`.
+Kitame pakete sukurkite klasę `AsmensKodoGeneratorius`, kuris turi metodą `generuoti`. Metodas `generuoti` turi naudoti Skaitliuko metodą `didintiVienetu` ir pasiekti klasės statinį kintamąjį.
+AK sudarymo taisykles: https://lt.wikipedia.org/wiki/Asmens_kodas
+Dar kitoje klasėje kviesdami metodą `generuoti` atspausdinkite visus galimus šios dienos 20190206 asmens kodus.
