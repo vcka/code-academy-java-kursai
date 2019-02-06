@@ -67,7 +67,7 @@ public class DefaultShopService implements ShopService {
     }
 
     @Override
-    public Map<Item.ItemType, Item> getItemsGroupedByType() {
+    public Map<Item.ItemType, List<Item>> getItemsGroupedByType() {
         return null;
     }
 
