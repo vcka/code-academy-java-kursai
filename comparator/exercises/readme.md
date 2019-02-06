@@ -40,3 +40,155 @@ Surūšiuoti skaičius sąraše. Surūšiuoti Y elementus saugantį sąrašą pa
     ```
 
 8. Nepamirškite metodo `toString` teisingai panaudoti `Comparable`. 
+
+### Sprendimas
+
+<details><summary>Išskleisti</summary>
+<p>
+
+```java
+package lt.codeacademy.learn;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Application {
+
+    public static void main(String[] args) {
+        List<HttpErrorPair> pairList = new ArrayList<>();
+
+        pairList.add(new HttpErrorPair(HttpCodeEnum.CODE_500, new InternalServerErrorHttpCode(ErrorLevels.HIGH)));
+        pairList.add(new HttpErrorPair(HttpCodeEnum.CODE_401, new BadRequestHttpCode(ErrorLevels.MEDIUM)));
+        pairList.add(new HttpErrorPair(HttpCodeEnum.CODE_404, new NotFoundHttpCode(ErrorLevels.LOW)));
+        pairList.add(new HttpErrorPair(HttpCodeEnum.CODE_403, new ForbiddenHttpCode(ErrorLevels.MEDIUM)));
+
+        System.out.println(pairList);
+        Collections.sort(pairList);
+        System.out.println(pairList);
+
+    }
+
+}
+
+enum HttpCodeEnum {
+    CODE_404,
+    CODE_401,
+    CODE_500,
+    CODE_403
+}
+
+enum ErrorLevels {
+    HIGH(2),
+    MEDIUM(1),
+    LOW(0);
+
+    private final int level;
+
+    ErrorLevels(int level) {
+        this.level = level;
+    }
+
+    public int getValue() {
+        return level;
+    }
+}
+
+class HttpCode implements Comparable<HttpCode> {
+    private ErrorLevels level;
+
+    public HttpCode(ErrorLevels level) {
+        this.level = level;
+    }
+
+    public ErrorLevels getLevel() {
+        return level;
+    }
+
+    public void setLevel(ErrorLevels level) {
+        this.level = level;
+    }
+
+    @Override
+    public int compareTo(HttpCode p) {
+        return Integer.compare(this.level.getValue(), p.getLevel().getValue());
+    }
+
+    @Override
+    public String toString() {
+        return "HttpCode{" +
+                "level=" + level +
+                '}';
+    }
+}
+
+class NotFoundHttpCode extends HttpCode {
+
+    public NotFoundHttpCode(ErrorLevels level) {
+        super(level);
+    }
+}
+
+class BadRequestHttpCode extends HttpCode {
+
+    public BadRequestHttpCode(ErrorLevels level) {
+        super(level);
+    }
+}
+
+class InternalServerErrorHttpCode extends HttpCode {
+
+    public InternalServerErrorHttpCode(ErrorLevels level) {
+        super(level);
+    }
+}
+
+class ForbiddenHttpCode extends HttpCode {
+    public ForbiddenHttpCode(ErrorLevels level) {
+        super(level);
+    }
+}
+
+class HttpErrorPair<K, V extends HttpCode> implements Comparable<HttpErrorPair> {
+
+    private K key;
+    private V code;
+
+    public HttpErrorPair(K key, V code) {
+        this.key = key;
+        this.code = code;
+    }
+
+    public K getKey() {
+        return key;
+    }
+
+    public void setKey(K key) {
+        this.key = key;
+    }
+
+    public V getCode() {
+        return code;
+    }
+
+    public void setCode(V code) {
+        this.code = code;
+    }
+
+    @Override
+    public int compareTo(HttpErrorPair o) {
+        return this.getCode().compareTo(o.getCode());
+    }
+
+    @Override
+    public String toString() {
+        return "HttpErrorPair{" +
+                "key=" + key +
+                ", code=" + code +
+                '}';
+    }
+}
+```
+
+</p>
+</details>

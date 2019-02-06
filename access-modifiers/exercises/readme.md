@@ -46,4 +46,3 @@ Vėliau apsaugoti `PvmValidatorius` klasės metodą `tikrintiPVMkoda`, kad jo ve
 
 [Šaltinis](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=14&ved=2ahUKEwixyoqIzdPfAhVCjSwKHYxdCPQQFjANegQIBBAC&url=http%3A%2F%2F85.81.229.78%2Fsystems%2FDKVIES%2F-%2520Arkiv%2FAlgoritme%25E6ndringer%2FVIES-VAT%2520Validation%2520Routines-v15.0.doc&usg=AOvVaw2mVLkFoVBQrUnVUfRafihp&fbclid=IwAR3k9SQy7HuSO_HSM9xfbqStjjfR90tbaDK-SRzr1PeTSUp9TfIKJcxpOxg)
 
-
