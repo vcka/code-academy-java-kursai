@@ -21,7 +21,7 @@ public interface ShopService {
 
     Item getMostExpensiveItem();
 
-    Map<Item.ItemType, Item> getItemsGroupedByType();
+    Map<Item.ItemType, List<Item>> getItemsGroupedByType();
 
     Item findItemBy(Predicate<Item> condition);
 
