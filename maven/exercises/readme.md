@@ -27,7 +27,7 @@
 Naudojant `commons-codec` biblioteką su Maven padarykite konsolinį login.
 
 Pvz.: vartotojui rodome meniu: [1] registruotis; [2] prisijungti
-Tada pasirinkus [1] bus prašoma įvesti vartotojo vardą, vėliau - sugalvotą slaptažodį, ir dar poto - tą slaptažodį įvesti dar kartą.
+Tada pasirinkus [1] bus prašoma įvesti vartotojo vardą, vėliau - sugalvotą slaptažodį, ir dar po to - tą slaptažodį įvesti dar kartą.
 Po šių veiksmų vartotojo vardas ir užšifruotas slaptažodis išsaugomi į Map.
 Kai vartotojas pasirinks [2], tada programa turi paprašyti įvesti vartotojo vardą ir slaptažodį. Slaptažodį tikrinti su jau įvestu ir išsaugotu Map'e. Atspausdinti informaciją - pavyko prisijungti ar ne
 
@@ -39,7 +39,7 @@ Naudoti naujausią `commons-codec` versiją:
 </dependency>
 ```
 
-Šifravimas:
+Užšifravimas:
 ```java
 String sha256hex = DigestUtils.sha256Hex("tekstas");
 ```
