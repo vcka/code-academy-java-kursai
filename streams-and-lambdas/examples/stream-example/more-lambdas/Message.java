@@ -29,7 +29,7 @@ public class Message {
         return time;
     }
 
-    public MessageType getTipe() {
+    public MessageType getType() {
         return tipe;
     }
 

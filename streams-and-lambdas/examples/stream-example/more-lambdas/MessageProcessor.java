@@ -15,8 +15,16 @@ public abstract class MessageProcessor {
         return !messages.isEmpty();
     }
 
-    abstract void handle(Message message);
-    abstract boolean canHandle(Message message);
+    void handle(Message message) {
+        if (canHandle(message)) {
+            messages.add(message);
+        }
+    }
+
+    boolean canHandle(Message message) {
+        return acceptableMessage.test(message);
+    }
+
     abstract void sendMessages();
 
 }

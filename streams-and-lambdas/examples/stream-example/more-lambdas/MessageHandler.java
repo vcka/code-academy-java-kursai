@@ -15,8 +15,7 @@ public class MessageHandler {
     public void handleMessages(List<Message> messages) {
         List<Message> failedMessages = messages.stream()
                 .map(this::handleSingleMessage)
-                .filter(failedMessage -> failedMessage.isPresent())
-                .map(optional -> optional.get())
+                .filter(failedMessage -> failedMessage != null)
                 .collect(Collectors.toList());
 
         this.failedMessages.addAll(failedMessages);
@@ -26,15 +25,17 @@ public class MessageHandler {
                 .forEach(MessageProcessor::sendMessages);
     }
 
-    private Optional<Message> handleSingleMessage(Message message) {
+    private Message handleSingleMessage(Message message) {
         for (MessageProcessor processor : this.processors) {
             if (processor.canHandle(message)) {
                 processor.handle(message);
-                return Optional.empty();
+                return null;
             }
         }
-        System.out.println("No processor found for message: "
-                + message.toString());
-        return Optional.of(message);
+        return message;
+    }
+
+    public List<Message> getFailedMessages() {
+        return failedMessages;
     }
 }
