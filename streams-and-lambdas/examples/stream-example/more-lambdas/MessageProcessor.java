@@ -11,8 +11,12 @@ public abstract class MessageProcessor {
         this.acceptableMessage = acceptableMessage;
     }
 
-    abstract boolean add(Message message);
+    public boolean anyMessagesToSend() {
+        return !messages.isEmpty();
+    }
 
+    abstract void handle(Message message);
+    abstract boolean canHandle(Message message);
     abstract void sendMessages();
 
 }

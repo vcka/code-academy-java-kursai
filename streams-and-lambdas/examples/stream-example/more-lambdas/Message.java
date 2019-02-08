@@ -36,4 +36,14 @@ public class Message {
     public List<Recipient> getRecipients() {
         return recipients;
     }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", body='" + body + '\'' +
+                ", time=" + time +
+                ", tipe=" + tipe +
+                '}';
+    }
 }
