@@ -52,3 +52,14 @@ Sukurkite Maven projektą su tėviniu POM ir moduliu, kuriame yra vaikinis POM.
 Remiantis teorijos medžiaga pabandykite `javafaker` įdėti į tėvinio POM `dependencyManagement`, vėliau be `dependencyManagement`.
 Sukurkite Java klasę vaikiniame modulyje ir panaudokite `Faker` funkcijas, pvz. sugeneruokite vardą.
 `javafaker` iškelti į POM `properties`.
+
+## Nr. 5
+
+### Užduotis
+
+1. Užsiregistruokite [Twilio](https://www.twilio.com)
+2. Susikonfigūruokte Twilio SMS (trial): https://www.twilio.com/console/sms/getting-started/build
+3. Sukurkite Maven prijektą ir prodėkite Twilio priklausomybę: https://www.twilio.com/docs/libraries/java
+4. Sukurkite Java programą, kuri moka išsiųsti SMS. Pavyzdys, kaip naudojant Twilio iš Java programos išsiųsti SMS: https://www.twilio.com/docs/sms/quickstart/java. `ACCOUNT SID` ir `AUTH TOKEN` rasite pagrindiniame Twilio puslapyje: https://www.twilio.com/console
+
+
