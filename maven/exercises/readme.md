@@ -43,3 +43,12 @@ Užšifravimas:
 ```java
 String sha256hex = DigestUtils.sha256Hex("tekstas");
 ```
+
+## Nr. 4
+
+### Užduotis
+
+Sukurkite Maven projektą su tėviniu POM ir moduliu, kuriame yra vaikinis POM.
+Remiantis teorijos medžiaga pabandykite `javafaker` įdėti į tėvinio POM `dependencyManagement`, vėliau be `dependencyManagement`.
+Sukurkite Java klasę vaikiniame modulyje ir panaudokite `Faker` funkcijas, pvz. sugeneruokite vardą.
+`javafaker` iškelti į POM `properties`.
