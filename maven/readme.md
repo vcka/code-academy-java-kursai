@@ -18,6 +18,7 @@
 - [POM](#POM)
     - [POM struktūra](#POM-struktūra)
     - [POM elementai](#POM-elementai)
+- [*Maven* moduliai ir paveldėjimas](#*Maven*-moduliai-ir-paveldėjimas)
 - [*Maven* alternatyvos](#*Maven*-alternatyvos)
 - [Naudingos nuorodos](#Naudingos-nuorodos)
 - [Tolesniam skaitymui](#Tolesniam-skaitymui)
@@ -655,6 +656,46 @@ POM yra projekto objektinis modelis (*Project Object Model*). POM yra pagrindin�
     </project>
     ```
 
+## *Maven* moduliai ir paveldėjimas
+
+![](./img/maven-8.png)
+
+- Sukuriamas Maven projektas
+- Į POM įdedamas `dependencyManagement`:
+    ```xml
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.javafaker</groupId>
+                <artifactId>javafaker</artifactId>
+                <version>0.17.2</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    ```
+- Sukuriamas vaikinis modulis. Pasirenkamas projektas, spaudžiama ant jo pelės dešinys klavišas ir renkamasi `New -> Module`.
+- Susikuria vaikinis modulis su atskiru POM.
+- Norint naudoti tėviniame POM'e `dependencyManagement` aprašytą priklausomybę, vaikiniame POM'e užtenka:
+    ```xml
+    <dependencies>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+        </dependency>
+    </dependencies>
+    ```
+    t.y. nereikia rašyti versijos, nes versiją paveldi iš tėvo POM.
+- Jei norime, kad visi tėvo vaikai paveldėtų priklausomybes, tada tėviniame POM rašome:
+    ```xml
+    <dependencies>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>0.17.2</version>
+        </dependency>
+    </dependencies>
+    ```
+    T.y. nenaudojame `dependencyManagement`. Tokiu atveju vaikų POM'uose nereikia aprašyti šios priklausomybės.
 
 ## *Maven* alternatyvos
 - [Gradle](https://gradle.org/)
