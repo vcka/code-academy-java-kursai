@@ -8,6 +8,5 @@ public class BowlingGameTest {
     @Test
     public void startGame() {
 
-    assertEquals("4", "4");
     }
 }
