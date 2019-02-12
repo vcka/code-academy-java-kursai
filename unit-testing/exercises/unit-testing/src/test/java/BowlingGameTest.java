@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,7 +16,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void testBowlingGame_firstThrow10_movedToNextFrame(){
+    public void testBowlingGame_firstThrow10_movedToNextFrame() {
         BowlingGame bowlingGame = BowlingGame.startGame();
         bowlingGame.throwBall(10);
 
@@ -23,7 +24,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow(){
+    public void testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow() {
         BowlingGame bowlingGame = BowlingGame.startGame();
 
         bowlingGame.throwBall(3);
@@ -34,8 +35,7 @@ public class BowlingGameTest {
     }
 
     @Test
-
-    public void testBowlingGame_firstThrow10_ResultsAfterAreDuplicated(){
+    public void testBowlingGame_firstThrow10_ResultsAfterAreDuplicated() {
         BowlingGame bowlingGame = BowlingGame.startGame();
         bowlingGame.throwBall(10);
         bowlingGame.throwBall(3);
