@@ -19,3 +19,4 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Kolekcijų karkasas](/collections-framework)
 - [*Lambda* išraiškos ir srautai](/streams-and-lambdas)
 - [Maven](/maven)
+- [Programinės įrangos testavimas](/unit-testing)
