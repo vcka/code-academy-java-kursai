@@ -23,7 +23,7 @@ Parašyti testai gali būti paleidžiami per naudojamą IDE arba, tinkamai sukon
 ### *Unit* testai su JUnit
 *JUnit* testai yra metodai, aprašyti testavimui skirtoje klasėje. Norint nurodyti, kad tam tikras metodas yra testas, reikia jam pridėti anotaciją `@Test`. Toks metodas įvykdo tam tikras kodo dalis ir patikrina gautus rezultatus. *JUnit* biblioteka pateikia metodus, leidžiančius palyginti gautus rezultatus su tikėtaisiais. Tokie metodai vadinami *asserts* arba *assert statements*.
 
-** *Unit* testo pavyzdys **
+***Unit* testo pavyzdys**
 ```java
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
