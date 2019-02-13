@@ -4,15 +4,18 @@ import java.util.List;
 
 public class BowlingGame {
 
+    private boolean multiply = false;
+    private int multiplyTimes = 0;
     private int currentFrame;
+    private int throwNumber;
     private int currentScore;
-    private List<Frame> frameScores;
+    private int[] scores;
 
     private BowlingGame() {
         currentFrame = 0;
         currentScore = 0;
-        frameScores = new ArrayList<>();
-        frameScores.add(new Frame());
+        throwNumber = 1;
+        scores = new int[21];
     }
 
     public static BowlingGame startGame() {
@@ -20,19 +23,28 @@ public class BowlingGame {
     }
 
     public void throwBall(int score) {
-        Frame frame = frameScores.get(currentFrame);
-        if (score == 10) {
-            frame.firstThrow = score;
-            currentFrame++;
-        } else {
-            if (frame.firstThrow == null) {
-                frame.firstThrow = score;
-            } else {
-                frame.secondThrow = score;
-                currentFrame++;
+        int multipliedScore = score;
+        if (multiply) {
+            multipliedScore *= 2;
+            multiplyTimes--;
+            if (multiplyTimes == 0) {
+                multiply = false;
             }
         }
-        this.currentScore += score;
+
+        scores[throwNumber - 1] = multipliedScore;
+        if (score == 10) {
+            multiply = true;
+            multiplyTimes += 2;
+            currentFrame++;
+            throwNumber += 2;
+        } else {
+            if (throwNumber % 2 == 0) {
+                currentFrame++;
+            }
+            throwNumber++;
+        }
+        this.currentScore += multipliedScore;
     }
 
     public int currentScore() {
@@ -47,10 +59,5 @@ public class BowlingGame {
 
     }
 
-
-    private static class Frame {
-        private Integer firstThrow;
-        private Integer secondThrow;
-    }
 
 }

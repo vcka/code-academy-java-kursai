@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf2f9446-c9bb-44d3-8ab9-3205b861457d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bowling-app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../inheritance/examples/src/utils/Operate2xLiteDrone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../inheritance/examples/src/utils/Operate2xLiteDrone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../inheritance/examples/src/utils/RcControllerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../inheritance/examples/src/utils/RcControllerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BowlingGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BowlingGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BowlingGameTest.java" afterDir="false" />
     </list>
@@ -29,39 +19,64 @@
     <session id="-53702996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="29" />
+          <entry key="java" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="29" />
+          <entry key="JAVA" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="624" />
+          <entry key="java" value="1007" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="624" />
+          <entry key="JAVA" value="1007" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BowlingGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="527">
+              <caret line="34" column="49" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BowlingGameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+              <folding>
+                <element signature="e#287#288#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +97,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BowlingGame.java" />
         <option value="$PROJECT_DIR$/src/test/java/BowlingGameTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BowlingGame.java" />
       </list>
     </option>
   </component>
@@ -98,11 +113,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="-1638" />
-    <option name="y" value="198" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1807" />
+    <option name="y" value="106" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -158,7 +173,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../officialidgenerator" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -172,11 +187,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow">
+  <component name="RunManager" selected="JUnit.BowlingGameTest">
     <configuration name="BowlingGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bowling-app" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BowlingGameTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BowlingGameTest.testBowlingGame_firstThrow10_ResultsAfterAreDuplicated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bowling-app" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BowlingGameTest" />
+      <option name="METHOD_NAME" value="testBowlingGame_firstThrow10_ResultsAfterAreDuplicated" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,11 +241,13 @@
       <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_firstThrow10_movedToNextFrame" />
       <item itemvalue="JUnit.BowlingGameTest" />
       <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow" />
+      <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_firstThrow10_ResultsAfterAreDuplicated" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow" />
         <item itemvalue="JUnit.BowlingGameTest" />
+        <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_firstThrow10_ResultsAfterAreDuplicated" />
+        <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow" />
         <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_firstThrow10_movedToNextFrame" />
         <item itemvalue="JUnit.BowlingGameTest.testBowlingGame_firstThrow4_resultIs4" />
       </list>
@@ -240,37 +267,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow4_resultIs4 - 2019.02.12 at 18h 45m 31s.xml">
-      <configuration name="BowlingGameTest.testBowlingGame_firstThrow4_resultIs4" configurationId="JUnit" />
+    <history-entry file="BowlingGameTest_testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow - 2019.02.12 at 19h 20m 51s.xml">
+      <configuration name="BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow4_resultIs4 - 2019.02.12 at 19h 01m 03s.xml">
-      <configuration name="BowlingGameTest.testBowlingGame_firstThrow4_resultIs4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow4_resultIs4 - 2019.02.12 at 19h 01m 38s.xml">
-      <configuration name="BowlingGameTest.testBowlingGame_firstThrow4_resultIs4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow4_resultIs4 - 2019.02.12 at 19h 01m 59s.xml">
-      <configuration name="BowlingGameTest.testBowlingGame_firstThrow4_resultIs4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow4_resultIs4 - 2019.02.12 at 19h 03m 21s.xml">
-      <configuration name="BowlingGameTest.testBowlingGame_firstThrow4_resultIs4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow10_movedToNextFrame - 2019.02.12 at 19h 18m 25s.xml">
-      <configuration name="BowlingGameTest.testBowlingGame_firstThrow10_movedToNextFrame" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow10_movedToNextFrame - 2019.02.12 at 19h 19m 13s.xml">
-      <configuration name="BowlingGameTest.testBowlingGame_firstThrow10_movedToNextFrame" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BowlingGameTest - 2019.02.12 at 19h 19m 23s.xml">
+    <history-entry file="BowlingGameTest - 2019.02.12 at 19h 49m 49s.xml">
       <configuration name="BowlingGameTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BowlingGameTest_testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow - 2019.02.12 at 19h 20m 51s.xml">
+    <history-entry file="BowlingGameTest - 2019.02.12 at 19h 55m 16s.xml">
+      <configuration name="BowlingGameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BowlingGameTest - 2019.02.12 at 19h 55m 42s.xml">
+      <configuration name="BowlingGameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BowlingGameTest_testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow - 2019.02.12 at 19h 56m 18s.xml">
+      <configuration name="BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BowlingGameTest_testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow - 2019.02.12 at 19h 58m 32s.xml">
+      <configuration name="BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BowlingGameTest - 2019.02.12 at 19h 58m 43s.xml">
+      <configuration name="BowlingGameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BowlingGameTest_testBowlingGame_firstThrow10_ResultsAfterAreDuplicated - 2019.02.12 at 19h 58m 59s.xml">
+      <configuration name="BowlingGameTest.testBowlingGame_firstThrow10_ResultsAfterAreDuplicated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BowlingGameTest - 2019.02.12 at 20h 06m 59s.xml">
+      <configuration name="BowlingGameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BowlingGameTest_testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow - 2019.02.12 at 20h 07m 03s.xml">
       <configuration name="BowlingGameTest.testBowlingGame_twoThrows_movedToNextFrameAfterSecondThrow" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" />
@@ -280,7 +309,7 @@
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.36018518" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.575" />
@@ -332,22 +361,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="68">
           <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BowlingGameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="e#287#288#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BowlingGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="527">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BowlingGameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
