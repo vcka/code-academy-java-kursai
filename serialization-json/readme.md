@@ -2,6 +2,18 @@
 
 ## Turinys
 - [Serializacija ir deserializacija](#Serializacija-ir-deserializacija)
+- [JSON](#JSON)
+    - [Java objekto serializavimas į JSON](#Java-objekto-serializavimas-į-JSON)
+    - [JSON deserializavimas į Java objektą](#JSON-deserializavimas-į-Java-objektą)
+    - [Java objekto konvertavimas į JSON eilutę ir atvirščiai](#Java-objekto-konvertavimas-į-JSON-eilutę-ir-atvirščiai)
+    - [Sąrašo konvertavimas į JSON ir atvirščiai](#Sąrašo-konvertavimas-į-JSON-ir-atvirščiai)
+    - [JSON konvertavimas į Java MAP](#JSON-konvertavimas-į-Java-MAP)
+    - [JSON konvertavimas į Java objektą su nežinomais laukais](#JSON-konvertavimas-į-Java-objektą-su-nežinomais-laukais)
+    - [Individualizuotas serializatorius](#Individualizuotas-serializatorius)
+    - [Individualizuotas deserializatorius](#Individualizuotas-deserializatorius)
+    - [JsonProperty anotacijos naudojimas](#JsonProperty-anotacijos-naudojimas)
+    - [JSON alternatyvos](#JSON-alternatyvos)
+- [Tolesniam skaitymui](#Tolesniam-skaitymui)
 - [Užduotys](#Užduotys)
 
 
@@ -202,6 +214,433 @@ Vilnius
 Sauletekio
 ```
 
+## JSON
+
+Naudosime Jackson:
+
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.9.4</version>
+</dependency>
+```
+
+### Java objekto serializavimas į JSON
+
+Java objektą serializuosime į JSON failą.
+
+Turime enum `Salis`:
+```java
+public enum Salis {
+    LIETUVA,
+    LATVIJA,
+    ESTIJA
+}
+```
+
+Turime klasę `Adresas`:
+```java
+public class Adresas {
+
+    private Salis salis;
+    private String miestas;
+    private String gatve;
+    private String namoNr;
+
+    public Adresas() {
+        // default konstruktorius bus reikalingas norint is JSON pagaminti Java objektą
+    }
+
+    public Adresas(Salis salis, String miestas, String gatve, String namoNr) {
+        this.salis = salis;
+        this.miestas = miestas;
+        this.gatve = gatve;
+        this.namoNr = namoNr;
+    }
+
+    // getteriai ir setteriai
+}
+```
+
+Atskiroje kalsėje `main` metode sukuriame adreso objektą:
+```java
+Adresas adresas = new Adresas(Salis.LIETUVA, "Vilnius", "Sauletekio", "15");
+```
+
+Taip pat sukuriame Jackson Object mapper'į:
+```java
+ObjectMapper mapper = new ObjectMapper();
+```
+
+Norėdami serializuoti adreso objektą į `json` failą sukuriame failo objektą ir jį kartu su adreso objektu paduodame Object mapper'io metodui `writeValue(...)`:
+```java
+File file = new File("target/adresas.json");
+mapper.writeValue(file, adresas);
+```
+Tada kataloge `target` bus sukurtas `adresas.json` failas:
+```json
+{
+  "salis": "LIETUVA",
+  "miestas": "Vilnius",
+  "gatve": "Sauletekio",
+  "namoNr": "15"
+}
+```
+
+### JSON deserializavimas į Java objektą
+
+JSON failą deserializuosime į Java objektą.
+
+Turime failą, kuriame yra JSON formatu saugomi duomenys apie adresą. Šį failą ir adreso klasę paduosime Object mapper'io metodui `readValue(...)`:
+```java
+ObjectMapper mapper = new ObjectMapper();
+
+File file = new File("target/adresas.json");
+
+Adresas adresasIsJsonFailo = mapper.readValue(file, Adresas.class);
+
+System.out.println(adresasIsJsonFailo.getSalis());
+System.out.println(adresasIsJsonFailo.getMiestas());
+System.out.println(adresasIsJsonFailo.getGatve());
+System.out.println(adresasIsJsonFailo.getNamoNr());
+```
+Rezultatas bus:
+```
+LIETUVA
+Vilnius
+Sauletekio
+15
+```
+
+### Java objekto konvertavimas į JSON eilutę ir atvirščiai
+
+Turime adreso objektą:
+```java
+Adresas adresas = new Adresas(Salis.LIETUVA, "Vilnius", "Sauletekio", "15");
+```
+Norėdami konvertuoti jį į String eilutę kviečiame Object mapper'io metodą `writeValueAsString(...)` paduodami jam adreso objektą:
+```java
+ObjectMapper mapper = new ObjectMapper();
+
+String jsonInString = mapper.writeValueAsString(adresas);
+
+System.out.println(jsonInString);
+```
+Rezultatas bus:
+```json
+{"salis":"LIETUVA","miestas":"Vilnius","gatve":"Sauletekio","namoNr":"15"}
+```
+
+Turime JSON eilutę:
+```java
+String jsonEilute = "{\"salis\":\"LIETUVA\",\"miestas\":\"Vilnius\",\"gatve\":\"Sauletekio\",\"namoNr\":\"15\"}";
+```
+
+Norėdami konveruoti JSON eilutę į Java objektą Objeck mapper'io metodui `readValue(...)` paduodame JSON eilutą ir objekto, į kurį konvertuosime, klasę:
+```java
+Adresas adresasIsJsonEilutes = mapper.readValue(jsonEilute, Adresas.class);
+
+System.out.println(adresasIsJsonEilutes.getSalis());
+System.out.println(adresasIsJsonEilutes.getMiestas());
+System.out.println(adresasIsJsonEilutes.getGatve());
+System.out.println(adresasIsJsonEilutes.getNamoNr());
+```
+
+Rezultatas bus:
+```
+LIETUVA
+Vilnius
+Sauletekio
+15
+```
+
+### Sąrašo konvertavimas į JSON ir atvirščiai
+
+Turime sąrašą su adresais ir norėdamį jį konvertuoti į JSON dirbame taip pat kaip ir su bet kokiu kituJava objektu:
+```java
+List<Adresas> adresai = new ArrayList<>();
+
+Adresas adresas1 = new Adresas(Salis.LIETUVA, "Vilnius", "Sauletekio", "15");
+Adresas adresas2 = new Adresas(Salis.LIETUVA, "Vilnius", "Antakalnio", "17");
+
+adresai.add(adresas1);
+adresai.add(adresas2);
+
+ObjectMapper mapper = new ObjectMapper();
+
+String jsonAdresai = mapper.writeValueAsString(adresai);
+System.out.println(jsonAdresai);
+```
+
+Rezultatas bus:
+
+```json
+[
+  {
+    "salis": "LIETUVA",
+    "miestas": "Vilnius",
+    "gatve": "Sauletekio",
+    "namoNr": "15"
+  },
+  {
+    "salis": "LIETUVA",
+    "miestas": "Vilnius",
+    "gatve": "Antakalnio",
+    "namoNr": "17"
+  }
+]
+```
+
+Turime JSON eilutę su sąrašu adresų. Norėdami tokią eilutę konvertuoti į Java objektų sąrašą naudojame Object mapper'io metodą `readvalue(...)` paduodant jam JSON eilutę ir `List` klasę:
+```java
+String jsonAdresai = "[{\"salis\":\"LIETUVA\",\"miestas\":\"Vilnius\",\"gatve\":\"Sauletekio\",\"namoNr\":\"15\"},{\"salis\":\"LIETUVA\",\"miestas\":\"Vilnius\",\"gatve\":\"Antakalnio\",\"namoNr\":\"17\"}]";
+
+ObjectMapper mapper = new ObjectMapper();
+List<Adresas> adresuSarasas = mapper.readValue(jsonAdresai, new TypeReference<List<Adresas>>(){});
+```
+
+### JSON konvertavimas į Java MAP
+
+Turime JSON eilutę ir norime ją konvertuoti į Java Map'ą:
+
+```java
+String jsonEilute = "{\"salis\":\"LIETUVA\",\"miestas\":\"Vilnius\",\"gatve\":\"Sauletekio\",\"namoNr\":\"15\"}";
+
+ObjectMapper mapper = new ObjectMapper();
+Map<String, Object> map = mapper.readValue(jsonEilute, new TypeReference<Map<String,Object>>(){});
+```
+
+### JSON konvertavimas į Java objektą su nežinomais laukais
+
+Sakykime JSON eilutėje yra laukas `pastoKodas` su reikšme `00000`. Tokio lauko klasėje `Adresas` nėra.
+Konvertuojant tokį JSON į adreso objketą:
+```java
+String jsonEilute = "{\"salis\":\"LIETUVA\",\"miestas\":\"Vilnius\",\"gatve\":\"Sauletekio\",\"namoNr\":\"15\",\"pastoKodas\": \"00000\"}";
+
+ObjectMapper mapper = new ObjectMapper();
+
+Adresas adresas = mapper.readValue(jsonEilute, Adresas.class);
+```
+
+Gausime klaidą:
+```
+Exception in thread "main" com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "pastoKodas" (class lt.codeacademy.Adresas), not marked as ignorable (4 known properties: "salis", "gatve", "miestas", "namoNr"])
+```
+
+Tokiu atveju Object mapper'iui galime nurodyti ignoruoti nežinomus laukus nustatant konfigūracijos parametrą `FAIL_ON_UNKNOWN_PROPERTIES` į `false`:
+```java
+String jsonEilute = "{\"salis\":\"LIETUVA\",\"miestas\":\"Vilnius\",\"gatve\":\"Sauletekio\",\"namoNr\":\"15\",\"pastoKodas\": \"00000\"}";
+
+ObjectMapper mapper = new ObjectMapper();
+mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+Adresas adresas = mapper.readValue(jsonEilute, Adresas.class);
+```
+
+### Individualizuotas serializatorius
+
+Galime sukurti savo individualizuotą serializatorių (*custom serializer*).
+
+Sakykime norime, kad raktai JSONé būtų angliski.
+Turime sukurti klasę `AdresoSerializeris` , kuri paveldi Jackson klasę `StdSerializer`. Sukurtoje klasėje sukuriame du konstruktorius - vienas be parametrų, kitas `Class` tipo parametru. kadangi klasėje `StdSerializer` yra anstraktus metodas `serialize(...)` todėl turime jį įgyvendinti paveldinčioje klasėje `AdresoSerializeris`.
+
+```java
+public class AdresoSerializeris extends StdSerializer<Adresas> {
+
+    public AdresoSerializeris() {
+        this(null);
+    }
+
+    public AdresoSerializeris(Class<Adresas> t) {
+        super(t);
+    }
+
+    @Override
+    public void serialize(Adresas adresas, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
+        jsonGenerator.writeStartObject();
+        jsonGenerator.writeStringField("country", String.valueOf(adresas.getSalis()));
+        jsonGenerator.writeStringField("city", adresas.getMiestas());
+        jsonGenerator.writeStringField("street", adresas.getGatve());
+        jsonGenerator.writeStringField("flatNo", adresas.getNamoNr());
+        jsonGenerator.writeEndObject();
+    }
+}
+```
+
+Tada tokio serializatoriaus panadojimas:
+
+```java
+ObjectMapper mapper = new ObjectMapper();
+SimpleModule module = new SimpleModule("AdresoSerializeris");
+module.addSerializer(Adresas.class, new AdresoSerializeris());
+mapper.registerModule(module);
+
+Adresas adresas = new Adresas(Salis.LIETUVA, "Vilnius", "Sauletekio", "15");
+String adresasJson = mapper.writeValueAsString(adresas);
+
+System.out.println(adresasJson);
+```
+
+Rezultatas:
+
+```json
+{
+  "country": "LIETUVA",
+  "city": "Vilnius",
+  "street": "Sauletekio",
+  "flatNo": "15"
+}
+```
+
+### Individualizuotas deserializatorius
+
+Viską darome panašiaip kaip serializatoriuje, tik kuriant deserializatrių klasė turi paveldėti `StdDeserializer` ir įgyvendinti jos abstraktų metodą `deserialize(...)`.
+
+```java
+public class AdresoDeserializeris extends StdDeserializer<Adresas> {
+
+
+    protected AdresoDeserializeris(Class<?> vc) {
+        super(vc);
+    }
+
+    protected AdresoDeserializeris(JavaType valueType) {
+        super(valueType);
+    }
+
+    protected AdresoDeserializeris(StdDeserializer<?> src) {
+        super(src);
+    }
+
+    @Override
+    public Adresas deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
+        Adresas adresas = new Adresas();
+
+        ObjectCodec codec = jsonParser.getCodec();
+        JsonNode node = codec.readTree(jsonParser);
+
+        JsonNode salisNode = node.get("country");
+        String salisString = salisNode.asText();
+        Salis salis = Salis.valueOf(salisString);
+        adresas.setSalis(salis);
+
+        JsonNode miestasNode = node.get("city");
+        String miestas = miestasNode.asText();
+        adresas.setMiestas(miestas);
+
+        JsonNode gatveNode = node.get("street");
+        String gatve = gatveNode.asText();
+        adresas.setGatve(gatve);
+
+        JsonNode numerisNode = node.get("flatNo");
+        String numeris = numerisNode.asText();
+        adresas.setNamoNr(numeris);
+
+        return adresas;
+    }
+}
+```
+
+Tokio deserializatoriaus panaudojimas:
+
+```java
+String adresasJson = "{\"country\":\"LIETUVA\",\"city\":\"Vilnius\",\"street\":\"Sauletekio\",\"flatNo\":\"15\"}";
+
+ObjectMapper mapper = new ObjectMapper();
+SimpleModule module = new SimpleModule("AdresoDeserializeris");
+module.addDeserializer(Adresas.class, new AdresoDeserializeris(Adresas.class));
+mapper.registerModule(module);
+
+Adresas adresas = mapper.readValue(adresasJson, Adresas.class);
+```
+
+### JsonProperty anotacijos naudojimas
+
+Norėdami pakeisti lauko, kuris bus konvertuotas į JSON nebūtinai turime rašyti savo serializatorių ir deserializatorių. Tam galime naudoti anotaciją `@JsonProperty`. Pavyzdys:
+
+Norime, kad klasės `Adresas` laukas `namoNr` JSON'e turėtų kitą pavadinimą - `gyvenamosiosVietosNumeris`.
+
+```java
+public class Adresas {
+
+    private Salis salis;
+    private String miestas;
+    private String gatve;
+
+    @JsonProperty("gyvenamosiosVietosNumeris")
+    private String namoNr;
+
+    // konstruktoriai, getteriai ir setteriai
+}
+```
+
+```java
+Adresas adresas = new Adresas(Salis.LIETUVA, "Vilnius", "Sauletekio", "15");
+String adresasJson = mapper.writeValueAsString(adresas);
+
+System.out.println(adresasJson);
+```
+
+Rezultatas:
+
+```json
+{
+  "salis": "LIETUVA",
+  "miestas": "Vilnius",
+  "gatve": "Sauletekio",
+  "gyvenamosiosVietosNumeris": "15"
+}
+```
+
+### JSON alternatyvos
+
+Trumas JSON struktūros palyginimas su alternatyvomis.
+
+```json
+{
+    "salis": {
+        "pavadinimas": "Lietuva",
+        "kodas": "LT"
+    },
+    "miestas": "Vilnius",
+    "gatve": "Sauletekio",
+    "namoNr": "15"
+}
+```
+
+#### XML
+
+```xml
+<adresas>
+    <salis>
+        <pavadinimas>Lietuva</pavadinimas>
+        <kodas>LT</kodas>
+    </salis>
+    <miestas>Vilnius</miestas>
+    <gatve>Sauletekio</gatve>
+    <namoNr>15</namoNr>
+</adresas>
+```
+
+#### YAML
+
+```yml
+adresas:
+    salis:
+        pavadinimas: Lietuva
+        kodas: LT
+    miestas: Vilnius
+    gatve: Sauletekio
+    namoNr: 15
+```
+
+
+## Tolesniam skaitymui
+- Serializacija: https://dzone.com/articles/serialization-amp-de-serialization-in-java
+- Joshua Bloch: *Effective Java* (85-90 skyriai)
+- Jackson anotacijos: https://www.baeldung.com/jackson-annotations
+- Jackson: https://www.baeldung.com/jackson
 
 ## Užduotys
 - [Užduotys](exercises/readme.md)
