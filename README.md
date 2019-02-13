@@ -21,3 +21,4 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Maven](/maven)
 - [Programinės įrangos testavimas](/unit-testing)
 - [Serializacija ir JSON](/serialization-json)
+- [Kartojimo užduotys](/more-exercises)
