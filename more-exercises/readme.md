@@ -1,4 +1,4 @@
-# Kartojimo užduotis
+# Kartojimo užduotys
 ### *Skaičių sekos keitimas*
 
 Parašykite metodą, kuris priimtų *Integer* tipo sąrašą ir grąžintų *String* tipo reikšmę su visais sąrašo elementais, atskirtais kableliais. Prie kiekvieno elemento turėtų būti pridėta raidė *e* jei skaičius yra lyginis arba raidė *o* jei skaičius nėra lyginis. Naudokite srautus.
