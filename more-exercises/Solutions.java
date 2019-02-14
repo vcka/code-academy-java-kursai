@@ -70,7 +70,7 @@ public class Solutions {
                 .map(number -> number * 2)
                 .filter(number -> number % 4 == 0)
                 .map(Object::toString)
-                .collect(Collectors.joining());
+                .collect(Collectors.joining(":"));
     }
 
     /**
