@@ -11,7 +11,7 @@ Parašykite metodą, kuris priimtų 3 parametrus – du *String* tipo žodžius 
 **Veikimui patikrinti nenaudokite *main* metodo,  tikrinkite *unit* testų pagalba.**
 
 ### *Unikalios raidės*
-Parašykite metodą, kuris priima sąrašą žodžių ir kaip rezultatą grąžina sąrašą su visomis unikaliomis žodžių raidėmis. Įgyvendinkite tai naudodami srautus.
+Parašykite metodą, kuris priima sąrašą žodžių ir kaip rezultatą grąžina kolekciją su visomis unikaliomis žodžių raidėmis. Įgyvendinkite tai naudodami srautus.
 
 **Veikimui patikrinti nenaudokite *main* metodo, o tikrinkite *unit* testų pagalba.**
 
