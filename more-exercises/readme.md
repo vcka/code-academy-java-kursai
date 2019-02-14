@@ -6,7 +6,7 @@ Parašykite metodą, kuris priimtų *Integer* tipo sąrašą ir grąžintų *Str
 **Veikimui patikrinti nenaudokite *main* metodo,  tikrinkite *unit* testų pagalba.**
 
 ### *Geresnis žodis*
-Parašykite metodą, kuris priimtų 3 parametrus – du *String* tipo žodžius ir *Predicate* palyginantį du žodžius ir grąžinantį *true*, jei pirmas žodis geresnis nei antras. Metodas turi grąžinti geresnį žodį panaudodamas gautą *Predicate*. 
+Parašykite metodą, kuris priimtų 3 parametrus – du *String* tipo žodžius ir *BiPredicate* palyginantį du žodžius ir grąžinantį *true*, jei pirmas žodis geresnis nei antras. Metodas turi grąžinti geresnį žodį panaudodamas gautą *BiPredicate*. 
 
 **Veikimui patikrinti nenaudokite *main* metodo,  tikrinkite *unit* testų pagalba.**
 
