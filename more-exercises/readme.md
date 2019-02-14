@@ -40,3 +40,5 @@ Parašykite metodą, kuris priima *String* tipo parametrą su  kableliu išskirt
 Parašykite metodą, kuris kaip parametrą priima 3x3 dvimatį masyvą, vaizduojantį kryžiukų - nuliukų žaidimo lentą ir grąžina *boolean* rezultatą, nurodantį, ar yra žaidimo laimėtojas
 
 **Veikimui patikrinti nenaudokite *main* metodo, tikrinkite *unit* testų pagalba.**
+
+### [Atsakymai](Solutions.java)
