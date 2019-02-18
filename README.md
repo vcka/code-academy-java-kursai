@@ -23,3 +23,4 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Serializacija ir JSON](/serialization-json)
 - [Kartojimo užduotys](/more-exercises)
 - [Java Date Time API](/java-date-time-api)
+- [Regex](/regex)
