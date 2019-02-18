@@ -325,6 +325,7 @@ System.out.println(objektasSuLaikuIsJson.getLaikas());  // 2019-02-16T19:26:28.7
 ## Nuorodos
 - https://www.baeldung.com/java-8-date-time-intro
 - https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html
+- https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 
 
 ## Užduotys
