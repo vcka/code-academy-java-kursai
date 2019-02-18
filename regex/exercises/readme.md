@@ -121,3 +121,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \* užduoties sąlygos yra viena su kita nesusijusios.
 
+## Nr. 2
+
+### Užduotis
+
+Sukurkite validatorių, kuris patikrina email adresą, pvz. `vardas@codeacademy.lt` turi būti validus, o `vardas@codea@cademy.lt` - nevalidus.
+
