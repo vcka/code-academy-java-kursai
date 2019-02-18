@@ -287,6 +287,7 @@ System.out.println(phone3.matches(pattern)); // false
 
 ## Nuorodos
 - https://www.oreilly.com/library/view/java-cookbook-3rd/9781449338794/ch04.html
+- Įrankis Regex patikrinti: https://regex101.com/
 
 ## Užduotys
 - [Užduotys](exercises/readme.md)
