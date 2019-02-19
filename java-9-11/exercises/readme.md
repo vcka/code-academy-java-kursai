@@ -85,3 +85,9 @@ Naudojantis datų iteravimo pavyzdžiu ir `String` klasės metodu `repeat(...)` 
 ### Užduotis
 
 Sukurkite Map'ą nurodydami kintamojo tipą `var`, į jį įdėkite keletą porų, Map'ą atspausdinkite. Atspausdinkite Map kintamojo tipą.
+
+## Nr. 6
+
+### Užduotis
+
+Sukurkite paprastą Java programą viename faile ir jį paleiskite su Java 11-os versijos komanda `java FailoPavadinimas.java`
