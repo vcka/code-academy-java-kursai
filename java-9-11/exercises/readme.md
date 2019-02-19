@@ -91,3 +91,37 @@ Sukurkite Map'ą nurodydami kintamojo tipą `var`, į jį įdėkite keletą por�
 ### Užduotis
 
 Sukurkite paprastą Java programą viename faile ir jį paleiskite su Java 11-os versijos komanda `java FailoPavadinimas.java`
+
+## Nr. 7
+
+### Užduotis
+
+Naudojant klasės `TimeUnit` metodą `convert` parašykite programą, kuriai įvedus skaičių (dienų, valandų ir pan.) atspausdins tą patį laiką tik kitais matavimo vienetais. Pavyzdžiui įvedus 15 dienų programa turi atspausdinti:
+```
+15 dienu
+360 valandu
+21600 minuciu
+1296000 sekundziu
+1296000000 milisekundziu
+1296000000000 mikrosekundziu
+1296000000000000 nanosekundziu
+```
+
+## Nr. 8
+
+### Užduotis
+
+Parašykite vieną kodo eilutę naudojant Java 11-os versijos naujus `String` metodus, kad gautumėte:
+```
+|_
+_|
+|_
+_|
+|_
+_|
+|_
+_|
+|_
+_|
+```
+Gautą rezultatą įrašykite į failą naudojant `Files` metodą `writeString`.
