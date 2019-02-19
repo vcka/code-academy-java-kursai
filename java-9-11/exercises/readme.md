@@ -80,3 +80,8 @@ Naudojantis datų iteravimo pavyzdžiu ir `String` klasės metodu `repeat(...)` 
 2019-02-14
 ```
 
+## Nr. 5
+
+### Užduotis
+
+Sukurkite Map'ą nurodydami kintamojo tipą `var`, į jį įdėkite keletą porų, Map'ą atspausdinkite. Atspausdinkite Map kintamojo tipą.
