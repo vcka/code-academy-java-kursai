@@ -1,6 +1,6 @@
-- Koks skirtumas tarp failo turinio nuskaitymo naudojant `Files.readAllLines` metodą ir failo turinio nuskaitymo naudojant BufferedReader, gaunama kviečiant metodą `Files.newBufferedReader`. Kada reikėtų naudoti vieną, o kada kitą metodą?
+1. Koks skirtumas tarp failo turinio nuskaitymo naudojant `Files.readAllLines` metodą ir failo turinio nuskaitymo naudojant BufferedReader, gaunama kviečiant metodą `Files.newBufferedReader`. Kada reikėtų naudoti vieną, o kada kitą metodą?
 
-- Pabaikite rašyti *lambda* išraišką, kuri sujungtų du Stringus ir grąžintų rezultatą kaip *char* masyvą nurodytame kode:
+2. Pabaikite rašyti *lambda* išraišką, kuri sujungtų du Stringus ir grąžintų rezultatą kaip *char* masyvą nurodytame kode:
 ```java
 public interface BiFunction<T, U, R> {
     R apply(T t, U u);
@@ -13,7 +13,7 @@ public class MyApp {
   }
 }
 ```
-- Koks rezultatas bus išvestas į konsolę nurodytame kode:
+3. Koks rezultatas bus išvestas į konsolę nurodytame kode:
 ```java
 public class MyApp {
     public static String processWords(List<String> words) {
@@ -28,7 +28,7 @@ public class MyApp {
     }
 }
 ```
-- Koks rezultatas bus išvestas į konsolę, nurodytame kode:
+4. Koks rezultatas bus išvestas į konsolę, nurodytame kode:
 ```java
 public class MyApp {
 
@@ -46,14 +46,14 @@ public class MyApp {
 }
 ```
 
-- Pasirinkite variantą, kuriame surašyti tik primityvieji tipai:
+5. Pasirinkite variantą, kuriame surašyti tik primityvieji tipai:
     - [ ] **A** `long`, `int`, `Float`, `double`, `short`
     - [ ] **B** `int`, `String`, `float`, `long`, `double`
     - [ ] **C** `double`, `boolean`, `float`, `short`, `char`
     - [ ] **D** `boolean`, `int`, `Char`, `long`, `short`
     - [ ] **E** `Long`, `Double`, `Integer`, `Char`, `Float`
 
-- Ką atspausdins tokia programa:
+6. Ką atspausdins tokia programa:
     ```java
     for (int i = 0; i < 10; i++) {
         System.out.print(i++);
@@ -65,7 +65,7 @@ public class MyApp {
     - [ ] **D** 02468
     - [ ] **E** 13579
 
-- Ką atspausdins tokia programa:
+7. Ką atspausdins tokia programa:
     ```java
     int a = 65533 + 2;
     int b = 65534 + 1;
@@ -84,7 +84,7 @@ public class MyApp {
     - [ ] **B** `true false/false false/false true/true`
     - [ ] **C** `false false/false false/false false/true`
 
-- Ką atspausdins tokia programa:
+8. Ką atspausdins tokia programa:
     ```java
     public class MyApp {
 
@@ -114,7 +114,7 @@ public class MyApp {
     - [ ] **B** 2
     - [ ] **C** 3
 
-- Duota tokia *Generic* klasė:
+9. Duota tokia *Generic* klasė:
     ```java
     public class Pair<K, V> {
 
@@ -141,17 +141,17 @@ public class MyApp {
     - [ ] **D** 1 ir 3
     - [ ] **E** 1, 2, 3 ir 4
 
-- Kuri *Maven* artefakto gyvavimo ciklo fazė įdiegia paketą į nutolusią saugyklą?
+10. Kuri *Maven* artefakto gyvavimo ciklo fazė įdiegia paketą į nutolusią saugyklą?
     - [ ] **A** `compile`
     - [ ] **B** `install`
     - [ ] **C** `deploy`
     - [ ] **D** `site`
 
-- Kas yra serializacija?
+11. Kas yra serializacija?
     - [ ] **A** Java objekto pavertimas į baitų srautą
     - [ ] **B** Baitų srauto pavertimas į Java objektą
 
-- Turime tokią programą, kuri naudoja *Jackson* biblioteką:
+12. Turime tokią programą, kuri naudoja *Jackson* biblioteką:
     ```java
     public class MyApp {
 
@@ -185,7 +185,7 @@ public class MyApp {
     - [ ] **C** `{"make": "WV", "modelis": "Passat"}`
     - [ ] **D** `{"make": "WV", "model": null}`
 
-- Ką atspausdins tokia programa:
+13. Ką atspausdins tokia programa:
     ```java
     LocalDateTime now = LocalDateTime.of(2019, Month.FEBRUARY, 15, 23, 39);
 
@@ -196,7 +196,7 @@ public class MyApp {
     - [ ] **C** 23:39
     - [ ] **D** 2019-FEBRUARY-15 23:39
 
-- Ką atspausdins tokia programa:
+14. Ką atspausdins tokia programa:
     ```java
     LocalDate now = LocalDate.parse("2019-02-21");
 
@@ -214,7 +214,7 @@ public class MyApp {
     - [ ] **D** 2019-07-07
     - [ ] **E** 2022-07-07
 
-- Turime tokią programą:
+15. Turime tokią programą:
     ```java
     String text = "The quick brown fox jumps over the lazy dog";
     text = text.replaceAll("(\\s+)(\\w{3})(\\s+)", "$1*$3");
@@ -228,7 +228,7 @@ public class MyApp {
     - [ ] **D** * * * * * * * * *
     - [ ] **E** The quick brown fox jumps over the lazy dog
 
-- Turime tokią programą (*java9*):
+16. Turime tokią programą (*java9*):
     ```java
     List<String> listas = List.of("1", "2", "3");   // 1 eil.
     listas.add(4);                                  // 2 eil.
@@ -239,17 +239,17 @@ public class MyApp {
     - [ ] **C** Pirmoje eilutėje gausime klaidą, nes klasė `List` neturi metodo `of(...)`
     - [ ] **D** Atspausdins [1, 2, 3, 4]
     
-- Koks skirtumas tarp git *add* ir git *commit* komandų?
+17. Koks skirtumas tarp git *add* ir git *commit* komandų?
 
 
-- Kokie elementai sudaro *list2* sąrašą?
+18. Kokie elementai sudaro *list2* sąrašą?
 ```java
 List<String> list1 = Arrays.asList(".", ":", "..", ":", "-", "-");
 Set<String> set1 = new HashSet<>(list1);
 List<String> list2 = new Linked<>(set1);
 ```
 
-- Kokia yra teisinga veiksmų seka norint nusiųsti kodo pakeitimus į *remote* serverį?
+19. Kokia yra teisinga veiksmų seka norint nusiųsti kodo pakeitimus į *remote* serverį?
 - [ ] git pull -> git commit -> git pull
 - [ ] git add -> git commit
 - [ ] git pull -> git add -> git commit -> git push
@@ -257,14 +257,14 @@ List<String> list2 = new Linked<>(set1);
 - [ ] git add -> git commit -> git push
 
 
-- Kaip parašyti teisingą *assert statement*, įrodantį, jog metodas `static int multiplyBySix(int number)` veikia taip, kaip reikia
+20. Kaip parašyti teisingą *assert statement*, įrodantį, jog metodas `static int multiplyBySix(int number)` veikia taip, kaip reikia
 - [ ] assertEquals(36, multiplyBySix(6))
 - [ ] assertEquals(multiplyBySix(6), 36)
 - [ ] assertEquals(multiplyBySix(6), 36, "6 multiplied by 6 should be 36")
 - [ ] assertEquals(6 * 6, 36)
 
 
-- Kurie žemiau nurodyti kintamojo priskirimai teisingi?
+21. Kurie žemiau nurodyti kintamojo priskirimai teisingi?
 ```java
    public class PrivatePerson extends Person {
    }
