@@ -26,6 +26,7 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Regex](/regex)
 - [Java 9-11](/java-9-11)
 - [Lygiagretus programavimas](/multi-threading)
+- [Kitos užduotys](/other)
 
 
 ### [Bandomasis egzaminas](/exams/test-exam.md)
