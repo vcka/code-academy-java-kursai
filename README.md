@@ -27,6 +27,7 @@ Mokomoji medžiaga skirta [Code Academy](https://www.codeacademy.lt/) programavi
 - [Java 9-11](/java-9-11)
 - [Lygiagretus programavimas](/multi-threading)
 - [Kitos užduotys](/other)
+- [Java virtuali mašina](/jvm)
 
 
 ### [Bandomasis egzaminas](/exams/test-exam.md)
