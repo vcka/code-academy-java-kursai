@@ -58,6 +58,80 @@ Kaip buvo minėta anksčiau, biblioteka pateikia rinkinį *assert* metodų, pade
 *Unit* testai vykdo mažas kodo dalis, dažniausiai metodus, vieną arba kelias susijusias klases. 
 Paprastai, jei testuojamoje klasėje yra naudojamos kitos klasės papildomiems veiksmams atlikti,  pavyzdžiui testuojama klasė `PersonService`, kuri naudoja `PersonRepository` klasę, reikalingą gauti žmonių sąrašui, tos klasės yra „pakeičiamos“ *mock* objektais.  *Mock* objektas simuliuoja tam tikrą klasę, tačiau nevykdo jokios logikos, o tiesiog grąžina iš anksto aprašytus rezultatus. Tai leidžia testuoti vieną, konkrečią klasę, išvengiant klaidų testavimo kitose, jos naudojamose klasėse.
 
+Priklausomybių paslėpimo naudojant `mockito` karkasą pavyzdys:
+- Reikalingas `mockito` dependency:
+    ```xml
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>2.0.2-beta</version>
+    </dependency>
+    ```
+- Turime klasę `Service`:
+    ```java
+    public class Service {
+
+        private List<String> list = new ArrayList<>();
+
+        public void loadList(List<String> list) {
+            this.list = list;
+        }
+
+        public List<String> getList() {
+            return list;
+        }
+    }
+    ```
+- Turime klasę `KlaseX`, kuri naudoja `Service`:
+    ```java
+    public class KlaseX {
+
+        private Service service;
+
+        public KlaseX(Service service) {
+            this.service = service;
+        }
+
+        public int sarasoDydis() {
+            return service.getList().size();
+        }
+    }
+    ```
+- Turime testą, kuris tesuoja kalsės `KlaseX` metodą `sarasoDydis`:
+    ```java
+    @Test
+    public void sarasoDydisTest() {
+
+        Service service = new Service();
+        KlaseX klaseX = new KlaseX(service);
+
+        assertEquals(3, klaseX.sarasoDydis());
+
+    }
+    ```
+    tačiau toks testas neveiks, nes sąrašo dydis yra 0. Mes norime, kad klasė `KlaseX` kviesdama klasės `Service` metodą `getList` gautų netuščią sąrašą elementų, bet nenorime kviesti kitų `Service` klasės metodų, kurie leistų užpildyti sąrašą.
+- Naudojant `mockito` toks veikianti testas atrodys taip:
+    ```java
+    @Test
+    public void sarasoDydisTest() {
+
+        Service service = mock(Service.class);
+        KlaseX klaseX = new KlaseX(service);
+
+        List<String> mockedList = new ArrayList<>();
+        mockedList.add("1");
+        mockedList.add("2");
+        mockedList.add("3");
+
+        when(service.getList()).thenReturn(mockedList);
+
+        assertEquals(3, klaseX.sarasoDydis());
+    }
+    ```
+    `mock(Service.class);` nurodome, kad mūsų `Service` bus užmockintas. 
+    `when(service.getList()).thenReturn(mockedList);` nurodome kokį sąrašą grąžinti, kai bus kviečiamas serviso `getList` metodas.
+
+
 ### Užduotys
 -   [Boulingo žaidimas](exercises/bowling-game.md)
 -	[Asmens kodo generatorius](exercises/official-id-generator.md)	
